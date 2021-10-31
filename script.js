@@ -1,6 +1,12 @@
 const dino = document.querySelector('.dino');
 const background = document.querySelector('.background');
-let position = 0;
+let position = 0; 
+
+//Pontuação
+let elemento = document.querySelector('#contador');
+		let contador = 0;
+		
+		setInterval(() => elemento.innerHTML = contador++, 70);
 
 let isJumping = false;
 
@@ -41,7 +47,7 @@ function jump () {
 function createCactus() {
     const cactus = document.createElement('div');
     let cactusPosition = 1000;
-    let randomTime = Math.random() * 6000;
+    let randomTime = Math.random() * 5000;
 
     cactus.classList.add('cactus');
     cactus.style.left = 1000 + 'px';
